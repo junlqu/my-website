@@ -1,16 +1,11 @@
-"use client";
+import "css/main.scss";
 
-import "@/app/style/main.scss";
+import ThemeChangeButton from "cmp/ThemeChangeButton";
 
 export default function Home() {
   return (
     <div>
-      <button onClick={change}>Change</button>
+      <ThemeChangeButton />
     </div>
   );
-}
-
-function change() {
-  document.body.classList.toggle("dark-theme");
-  document.body.classList.toggle("light-theme");
 }

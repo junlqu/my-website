@@ -3,7 +3,8 @@
     "paths": {
       "@/*": ["./*"],
       "css/*": ["./app/style/*"],
-      "csslib/*": ["./app/style/lib/*"] 
+      "csslib/*": ["./app/style/lib/*"],
+      "cmp/*": ["./components/*"],
     }
   }
 }

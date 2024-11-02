@@ -2,6 +2,6 @@
 
 div {
     @include themed() {
-        background: c(primary);
+        background: c(p);
     }
 }
