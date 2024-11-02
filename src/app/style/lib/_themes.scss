@@ -1,0 +1,80 @@
+@use "sass:map";
+
+$themes: (
+    // Light theme
+    light: (
+        // Primary and accent colors
+        primary:    #496F5D,
+        primary2:   #63907B,
+        primary3:   #6EAA8D,
+        primary4:   #74C69F,
+        primary5:   #9AF6CB,
+        accent:     #52796F,
+        accent2:    #275549,
+        accent3:    #11382E,
+        
+        // Secondary colors
+        secondary:  #3F334D,
+        secondary2: #635276,
+        secondary3: #8D74A9,
+        secondary4: #8D74A9,
+
+        // Neutral colors
+        neutral:    #EEF0F2,
+        neutral2:   #C6C7C4,
+        neutral3:   #9C9C9C,
+        neutral4:   #3D3D3D,
+        neutral5:   #0E0E0E,
+    ),
+
+    // Dark theme
+    dark: (
+        // Primary and accent colors
+        primary:    #000,
+        primary2:   #000,
+        primary3:   #000,
+        primary4:   #000,
+        primary5:   #000,
+        accent:     #000,
+        accent2:    #000,
+        accent3:    #000,
+        
+        // Secondary colors
+        secondary:  #000,
+        secondary2: #000,
+        secondary3: #000,
+        secondary4: #000,
+
+        // Neutral colors
+        neutral:    #000,
+        neutral2:   #000,
+        neutral3:   #000,
+        neutral4:   #000,
+        neutral5:   #000,
+    )
+);
+
+$theme-map: null;
+
+// Function used to map colors depending on theme
+@mixin themed() {
+    $suffix: theme;
+    
+    @each $th, $map in $themes {
+        .#{$th}-#{$suffix} & {
+            $theme-map: () !global;
+            
+            @each $key, $val in $map {
+                $theme-map: map.merge($theme-map, ($key: map.get(map.get($themes, $th), '#{$key}'))) !global;
+            }
+
+            @content;
+            $theme-map: null !global;
+        }
+    }
+}
+
+// Function called to get the colours
+@function c($key) {
+    @return map.get($theme-map, $key);
+}

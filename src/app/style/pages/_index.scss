@@ -1,0 +1,7 @@
+@use "csslib/themes" as *;
+
+div {
+    @include themed() {
+        background: c(primary);
+    }
+}
