@@ -11,21 +11,51 @@
 //  //  //  //  //  //  //  //  //
 
 #main-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100vw;
     height: 80px;
 }
 
-#main-header-wrapper {
+#main-header-image-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
-}
 
-#main-header-image {
-    transition: transform 1.4s ease-in-out;
-
-    &:hover {
+    &:hover #main-header-image {
         cursor: pointer;
         transform: rotate(360deg);
     }
+
+    &:hover #main-header-left {
+        right: 0;
+    }
+
+    &:hover #main-header-right {
+        left: 0;
+    }
+}
+
+#main-header-image {
+    border-radius: 50%;
+    transition: transform 1.1s ease-in-out;
+}
+
+.main-header-nav-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 256px;
+    height: 48px;
+}
+
+.main-header-nav {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: red;
+    transition: 1.1s ease-in-out;
 }

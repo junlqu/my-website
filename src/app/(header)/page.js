@@ -1,10 +1,8 @@
-import "css/main.scss";
-
 import ThemeChangeButton from "cmp/ThemeChangeButton";
 
-export default function Home() {
+export default function Main() {
   return (
-    <div>
+    <div id="main">
       <ThemeChangeButton />
     </div>
   );
