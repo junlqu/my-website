@@ -1,6 +1,6 @@
 @use "csslib/themes" as *;
 
-div {
+header {
     @include themed() {
         background: c(p);
     }

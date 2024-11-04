@@ -1,6 +1,8 @@
+import "@/style/main.scss";
+
 export const metadata = {
-  title: 'Welcome | Junlin Qu',
-  description: 'Welcome to my personal website. I am a software engineer based in Toronto, Canada. I am passionate about building software that is scalable, maintainable, and user-friendly.',
+  title: "Welcome | Junlin Qu",
+  description: "Welcome to my personal website. I am a software engineer based in Toronto, Canada. I am passionate about building software that is scalable, maintainable, and user-friendly.",
 }
 
 export default function RootLayout({ children }) {
