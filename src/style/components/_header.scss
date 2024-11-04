@@ -1,0 +1,31 @@
+//  //  //  //  //  //  //  //  //
+// Across all headers
+//  //  //  //  //  //  //  //  //
+
+.header-content {
+    max-height: 64px;
+}
+
+//  //  //  //  //  //  //  //  //
+// Main header
+//  //  //  //  //  //  //  //  //
+
+#main-header {
+    width: 100vw;
+    height: 80px;
+}
+
+#main-header-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-header-image {
+    transition: transform 1.4s ease-in-out;
+
+    &:hover {
+        cursor: pointer;
+        transform: rotate(360deg);
+    }
+}
