@@ -36,7 +36,7 @@
 
     &:hover #main-header-image {
         cursor: pointer;
-        transform: rotate(360deg);
+        transform: rotate(720deg);
     }
 
     @include bp(map.get($bp, lg)) {
@@ -64,7 +64,7 @@
     overflow: hidden;
     width: 0px;
     height: 48px;
-    transition: width 1.1s ease-out;
+    transition: width 1.1s ease-in-out;
 }
 
 .main-header-nav {
@@ -72,5 +72,5 @@
     width: 256px;
     height: 100%;
     background: red;
-    transition: 1.1s ease-out;
+    transition: 1.1s ease-in-out;
 }
