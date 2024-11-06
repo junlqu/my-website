@@ -19,10 +19,12 @@ export default function HeaderImage() {
   });
 
   return (
-    <Link id="main-header-image-wrapper" href="/">
+    <div id="main-header-image-wrapper">
       <MainHeaderNavLeft />
-      <Image id="main-header-image" src="/temp.png" width={64} height={64} alt="JLQ" className="header-content" />
+      <Link className="header-content" href="/">
+        <Image id="main-header-image" src="/temp.png" width={64} height={64} alt="JLQ" href="/" />
+      </Link>
       <MainHeaderNavRight />
-    </Link>
+    </div>
   );
 }
