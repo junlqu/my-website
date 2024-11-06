@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 import { MainHeaderNavLeft, MainHeaderNavRight } from "./MainHeaderNavigation";
 
@@ -10,7 +10,7 @@ export default function HeaderImage() {
   useEffect(() => {
     if (!window.matchMedia("(any-hover: hover)").matches) {
       document.querySelectorAll(".main-header-nav-wrapper").forEach((el) => {
-        el.classList.remove("nowidth");
+        el.style.width = "256px";
       });
       document.querySelectorAll(".main-header-nav").forEach((el) => {
         el.classList.remove("hidden-right", "hidden-left");
