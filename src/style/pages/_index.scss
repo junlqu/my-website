@@ -1,7 +1,7 @@
 @use "csslib/themes" as *;
 
-header {
+#main {
     @include themed() {
-        background: c(p);
+        background: c(n);
     }
 }
