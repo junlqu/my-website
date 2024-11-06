@@ -1,0 +1,11 @@
+@use 'vars' as *;
+
+@mixin bp($size: null) {
+  @if $size == null {
+    @content;
+  } @else {
+    @media (min-width: $size) {
+      @content;
+    }
+  }
+}
