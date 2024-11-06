@@ -2,8 +2,80 @@ import ThemeChangeButton from "cmp/ThemeChangeButton";
 
 export default function Main() {
   return (
-    <div id="main">
+    <div id="main" className="wrapper">
       <ThemeChangeButton />
+      <p>a</p>
+      <p>a</p>
+      <p>a</p>
+      <p>a</p>
+      <p>a</p>
+      <p>a</p>
+      <p>a</p>
+      <p>a</p>
+      <p>a</p>
+      <p>a</p>
+      <p>a</p>
+      <p>a</p>
+      <p>a</p>
+      <p>a</p>
+      <p>a</p>
+      <p>a</p>
+      <p>a</p>
+      <p>a</p>
+      <p>a</p>
+      <p>a</p>
+      <p>a</p>
+      <p>a</p>
+      <p>a</p>
+      <p>a</p>
+      <p>a</p>
+      <p>a</p>
+      <p>a</p>
+      <p>a</p>
+      <p>a</p>
+      <p>a</p>
+      <p>a</p>
+      <p>a</p>
+      <p>a</p>
+      <p>a</p>
+      <p>a</p>
+      <p>a</p>
+      <p>a</p>
+      <p>a</p>
+      <p>a</p>
+      <p>a</p>
+      <p>a</p>
+      <p>a</p>
+      <p>a</p>
+      <p>a</p>
+      <p>a</p>
+      <p>a</p>
+      <p>a</p>
+      <p>a</p>
+      <p>a</p>
+      <p>a</p>
+      <p>a</p>
+      <p>a</p>
+      <p>a</p>
+      <p>a</p>
+      <p>a</p>
+      <p>a</p>
+      <p>a</p>
+      <p>a</p>
+      <p>a</p>
+      <p>a</p>
+      <p>a</p>
+      <p>a</p>
+      <p>a</p>
+      <p>a</p>
+      <p>a</p>
+      <p>a</p>
+      <p>a</p>
+      <p>a</p>
+      <p>a</p>
+      <p>a</p>
+      <p>a</p>
+      
     </div>
   );
 }
