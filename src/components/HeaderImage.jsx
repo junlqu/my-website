@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useEffect } from "react";
 
 import { MainHeaderNavLeft, MainHeaderNavRight } from "./MainHeaderNavigation";
+import Logo from "@/public/logo.jsx";
 
 export default function HeaderImage() {
   useEffect(() => {
@@ -21,10 +22,11 @@ export default function HeaderImage() {
   return (
     <div id="main-header-image-wrapper">
       <MainHeaderNavLeft />
-      <Link className="header-content" href="/">
-        <Image id="main-header-image" src="/temp.png" width={64} height={64} alt="JLQ" href="/" />
-      </Link>
+      <div className="header-spacer"></div>
       <MainHeaderNavRight />
+      <Link id="main-header-center" className="header-content" href="/">
+        <Logo id="main-header-image" href="/" />
+      </Link>
     </div>
   );
 }

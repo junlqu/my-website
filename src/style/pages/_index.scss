@@ -2,7 +2,7 @@
 
 #main {
     @include themed() {
-        background: c(n2);
+        background: c(n);
     }
 }
 
@@ -29,10 +29,6 @@
     overflow: hidden;
     height: 100%;
     filter: blur(8px);
-
-    @include themed() {
-        background: c(n2);
-    }
 }
 
 .cursor-background {
