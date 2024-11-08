@@ -2,8 +2,8 @@
 
 import * as React from "react";
 
-import LightTheme from "../public/theme-light.jsx" ;
-import DarkTheme from "../public/theme-dark.jsx";
+import LightTheme from "../../public/theme-light.jsx" ;
+import DarkTheme from "../../public/theme-dark.jsx";
 
 export default function ThemeChangeButton() {
   return (

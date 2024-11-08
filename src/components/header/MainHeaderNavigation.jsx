@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import ThemeChangeButton from "cmp/ThemeChangeButton";
+import ThemeChangeButton from "@/components/header/ThemeChangeButton";
 
 export function MainHeaderNavLeft() {
   return (
