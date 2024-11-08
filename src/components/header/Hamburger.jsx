@@ -75,7 +75,7 @@ export default function Hamburger() {
           <a className="hamburger-content menu-options hamburger-anim filled" onClick={() => routeFromMenu("/resume")} >
             Resume
           </a>
-          <ThemeChangeButton className="menu-options hamburger-anim filled" />
+          <ThemeChangeButton className="menu-options hamburger-anim filled" idx="hamburger" />
         </div>
       </div>
     </>

@@ -5,6 +5,7 @@
       "css/*": ["./style/*"],
       "csslib/*": ["./style/lib/*"],
       "cmp/*": ["./components/*"],
+      "util/*": ["./utils/*"],
     }
   }
 }

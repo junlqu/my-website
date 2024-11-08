@@ -2,6 +2,8 @@
 
 import { useRef } from "react";
 
+import TypeOut from "./TypeOut";
+
 export default function LandingIntro() {
   const back = useRef();
   const fore = useRef();
@@ -31,10 +33,7 @@ export default function LandingIntro() {
   return  (
     <>
       <div className="intro-header">
-        <div className="intro-text">
-          <h1>Hello world.</h1>
-          <h2>This is Jun.</h2>
-        </div>
+        <TypeOut />
         <div ref={back} className="cursor-background-wrapper" onMouseMove={(e) => {moveCursor(e)}}>
           <div ref={fore} className="cursor-background noshow" />
         </div>
