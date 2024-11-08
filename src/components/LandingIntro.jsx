@@ -22,13 +22,10 @@ export default function LandingIntro() {
     trail.style.top = `${y}px`;
     back.current.appendChild(trail);
 
-    // Remove the trail after 1 second or after 300 additions
-    if (back.current.children.length > 300) {
-      back.current.children[0].remove();
-    }
+    // Remove the trail after 1 second or after 500 additions
     setTimeout(() => {
       trail.remove();
-    }, Math.random() * 3000 + 1000);
+    }, 3000);
   }
 
   return  (

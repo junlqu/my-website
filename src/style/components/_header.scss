@@ -120,7 +120,7 @@
     width: 64px;
     height: 64px;
     border-radius: 50%;
-    transition: transform 1.1s ease-in-out, opacity 0.5s ease-in-out;
+    transition: transform 1.1s ease-in-out, opacity 0.5s ease-in-out, fill 0.5s ease-in-out;
 
     @include themed() {
         fill: c(n);
