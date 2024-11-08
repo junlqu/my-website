@@ -22,18 +22,26 @@ export default function LandingIntro() {
     trail.style.top = `${y}px`;
     back.current.appendChild(trail);
 
-    // Remove the trail after 1 second
+    // Remove the trail after 1 second or after 300 additions
+    if (back.current.children.length > 300) {
+      back.current.children[0].remove();
+    }
     setTimeout(() => {
       trail.remove();
     }, Math.random() * 3000 + 1000);
   }
 
   return  (
-    <div ref={back} className="intro-header" onMouseMove={(e) => {moveCursor(e)}}>
-      <h1>Hi, I'm <span className="highlight">John Doe</span></h1>
-      <section className="drawing-board">
-        <div ref={fore} className="cursor-background noshow" />
-      </section>
-    </div>
+    <>
+      <div className="intro-header">
+        <div className="intro-text">
+          <h1>Hello world.</h1>
+          <h2>This is Jun.</h2>
+        </div>
+        <div ref={back} className="cursor-background-wrapper" onMouseMove={(e) => {moveCursor(e)}}>
+          <div ref={fore} className="cursor-background noshow" />
+        </div>
+      </div>
+    </>
   )
 }

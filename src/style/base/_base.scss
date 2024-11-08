@@ -11,8 +11,22 @@ body {
 }
 
 header {
+    z-index: 100;
+    
     @include themed() {
-        background: c(n2);
+        background: c(p2);
+    }
+}
+
+h1 {    
+    @include themed() {
+        color: c(n5);
+    }
+}
+
+h2 {
+    @include themed() {
+        color: c(n4);
     }
 }
 
