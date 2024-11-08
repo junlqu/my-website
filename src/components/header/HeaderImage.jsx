@@ -10,7 +10,7 @@ export default function HeaderImage() {
   useEffect(() => {
     if (!window.matchMedia("(any-hover: hover)").matches) {
       document.querySelectorAll(".main-header-nav-wrapper").forEach((el) => {
-        el.style.width = "256px";
+        el.classList.add("nocursor");
       });
       document.querySelectorAll(".main-header-nav").forEach((el) => {
         el.classList.remove("hidden-right", "hidden-left");
