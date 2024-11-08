@@ -12,9 +12,9 @@ body {
 
 header {
     z-index: 100;
-    
+
     @include themed() {
-        background: c(p2);
+        background: c(p3);
     }
 }
 
