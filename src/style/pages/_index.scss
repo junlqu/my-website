@@ -5,3 +5,54 @@
         background: c(n);
     }
 }
+
+.intro-header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.intro-text {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    font-size: 48px;
+    font-weight: 700;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.cursor-background-wrapper {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    filter: blur(8px);
+}
+
+.cursor-background {
+    position: absolute;
+    left: -100%;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    transform: translateX(-50%) translateY(-50%);
+    animation: shrink 4s ease-in-out;
+
+    @keyframes shrink {
+        0% {
+            height: 100px;
+            width: 100px;
+        }
+        100% {
+            height: 0;
+            width: 0;
+        }
+    }
+
+    @include themed() {
+        background: c(p3);
+        opacity: 1;
+    }
+}

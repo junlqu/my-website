@@ -5,26 +5,37 @@ html {
 }
 
 body {
-    width: 100vw;
+    max-width: 100vw;
     min-height: 100vh;
     margin: 0;
 }
 
 header {
+    z-index: 100;
+
     @include themed() {
-        background: c(n2);
+        background: c(p3);
+    }
+}
+
+h1 {
+    transition: all 1.1s ease-in-out;
+
+    @include themed() {
+        color: c(n5);
+    }
+}
+
+h2 {
+    transition: all 1.1s ease-in-out;
+
+    @include themed() {
+        color: c(n4);
     }
 }
 
 .wrapper {
     width: 100%;
     height: 100%;
-}
-
-.hidden-left {
-    left: -100%;
-}
-
-.hidden-right {
-    right: -100%;
+    transition: all 1.1s ease-in-out;
 }
