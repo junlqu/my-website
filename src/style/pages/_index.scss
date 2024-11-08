@@ -38,5 +38,6 @@
 
     @include themed() {
         background: c(p);
+        opacity: 0.3;
     }
 }

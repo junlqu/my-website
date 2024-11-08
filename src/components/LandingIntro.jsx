@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 
-export default function MouseBlend() {
+export default function LandingIntro() {
   const back = useRef();
   const fore = useRef();
 
@@ -30,7 +30,10 @@ export default function MouseBlend() {
 
   return  (
     <div ref={back} className="intro-header" onMouseMove={(e) => {moveCursor(e)}}>
-      <div ref={fore} className="cursor-background noshow" />
+      <h1>Hi, I'm <span className="highlight">John Doe</span></h1>
+      <section className="drawing-board">
+        <div ref={fore} className="cursor-background noshow" />
+      </section>
     </div>
   )
 }
