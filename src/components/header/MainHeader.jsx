@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useState } from "react";
 
 import HeaderImage from "./HeaderImage";
+import Hamburger from "./Hamburger";
 
 export default function MainHeader() {
   const [scrollState, setScrollState] = useState(0);
@@ -32,6 +33,7 @@ export default function MainHeader() {
 
   return (
     <header id="main-header" className="header scroll-fix wrapper">
+      <Hamburger />
       <HeaderImage />
     </header>
   );

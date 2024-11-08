@@ -1,6 +1,6 @@
 import "@/style/main.scss";
 
-import MainHeader from "@/components/MainHeader";
+import MainHeader from "cmp/header/MainHeader";
 
 export const metadata = {
   title: "Welcome | Junlin Qu",
