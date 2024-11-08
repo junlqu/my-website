@@ -1,7 +1,6 @@
 "use client";
 
 import * as React from "react";
-import Image from "next/image";
 
 import LightTheme from "../public/theme-light.jsx" ;
 import DarkTheme from "../public/theme-dark.jsx";
@@ -21,4 +20,11 @@ export default function ThemeChangeButton() {
 function change() {
   document.body.classList.toggle("dark-theme");
   document.body.classList.toggle("light-theme");
+
+  if (localStorage.getItem("theme") === "dark") {
+    localStorage.setItem("theme", "light");
+  }
+  else if (localStorage.getItem("theme") === "light") {
+    localStorage.setItem("theme", "dark");
+  }
 }
