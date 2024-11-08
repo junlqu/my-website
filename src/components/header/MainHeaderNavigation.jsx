@@ -30,7 +30,7 @@ export function MainHeaderNavRight() {
         <Link className="header-content menu-options" href="/resume">
           Resume
         </Link>
-        <ThemeChangeButton className="header-content menu-options"/>
+        <ThemeChangeButton className="header-content menu-options" idx="header" />
       </div>
     </div>
   );

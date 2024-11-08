@@ -8,13 +8,11 @@ import Logo from "@/public/logo.jsx";
 
 export default function HeaderImage() {
   useEffect(() => {
-    if (!window.matchMedia("(any-hover: hover)").matches) {
-      document.querySelectorAll(".main-header-nav-wrapper").forEach((el) => {
-        el.classList.add("nocursor");
-      });
-      document.querySelectorAll(".main-header-nav").forEach((el) => {
-        el.classList.remove("hidden-right", "hidden-left");
-      });
+    const interval = setInterval(() => checkHover(), 1000);
+    window.addEventListener("resize", checkHover);
+    return () => {
+      clearInterval(interval);
+      window.removeEventListener("resize", checkHover)
     }
   });
 
@@ -28,4 +26,24 @@ export default function HeaderImage() {
       </Link>
     </div>
   );
+}
+
+function checkHover() {
+  if (!window.matchMedia("(any-hover: hover)").matches) {
+    document.querySelectorAll(".main-header-nav-wrapper").forEach((el) => {
+      el.classList.add("nocursor");
+    });
+    document.querySelectorAll(".main-header-nav").forEach((el) => {
+      el.classList.remove("hidden-right", "hidden-left");
+    });
+  }
+  else {
+    document.querySelectorAll(".main-header-nav-wrapper").forEach((el) => {
+      el.classList.remove("nocursor");
+    });
+    document.querySelectorAll(".main-header-nav").forEach((el, idx) => {
+      if (idx === 0) el.classList.add("hidden-right");
+      else el.classList.add("hidden-left");
+    });
+  }
 }

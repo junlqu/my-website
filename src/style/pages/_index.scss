@@ -29,7 +29,7 @@
     position: relative;
     overflow: hidden;
     height: 100%;
-    filter: blur(8px);
+    filter: blur(20px);
 }
 
 .cursor-background {
@@ -39,7 +39,7 @@
     height: 100px;
     width: 100px;
     transform: translateX(-50%) translateY(-50%);
-    animation: shrink 4s ease-in-out;
+    animation: shrink 3.1s ease-in-out;
 
     @keyframes shrink {
         0% {

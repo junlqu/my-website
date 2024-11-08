@@ -1,6 +1,7 @@
 import "@/style/main.scss";
 
 import MainHeader from "cmp/header/MainHeader";
+import GetThemeFromStorage from "util/GetThemeFromStorage";
 
 export const metadata = {
   title: "Welcome | Junlin Qu",
@@ -11,6 +12,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className="light-theme">
+        <GetThemeFromStorage />
         <MainHeader />
         {children}
       </body>

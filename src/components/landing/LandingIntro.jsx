@@ -2,6 +2,8 @@
 
 import { useRef } from "react";
 
+import TypeOut from "./TypeOut";
+
 export default function LandingIntro() {
   const back = useRef();
   const fore = useRef();
@@ -22,22 +24,16 @@ export default function LandingIntro() {
     trail.style.top = `${y}px`;
     back.current.appendChild(trail);
 
-    // Remove the trail after 1 second or after 300 additions
-    if (back.current.children.length > 300) {
-      back.current.children[0].remove();
-    }
+    // Remove the trail after 1 second or after 500 additions
     setTimeout(() => {
       trail.remove();
-    }, Math.random() * 3000 + 1000);
+    }, 3000);
   }
 
   return  (
     <>
       <div className="intro-header">
-        <div className="intro-text">
-          <h1>Hello world.</h1>
-          <h2>This is Jun.</h2>
-        </div>
+        <TypeOut />
         <div ref={back} className="cursor-background-wrapper" onMouseMove={(e) => {moveCursor(e)}}>
           <div ref={fore} className="cursor-background noshow" />
         </div>
