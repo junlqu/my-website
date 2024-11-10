@@ -13,12 +13,14 @@ export default function TypeOut() {
     setTimeout(() => {
       for (let i = 0; i <= title.length; i++) {
         setTimeout(() => {
+          if (text1.current === null) return;
           text1.current.textContent = title.slice(0, i);
         }, 100 * i);
       }
     
       for (let i = 0; i <= subtitle.length; i++) {
         setTimeout(() => {
+          if (text1.current === null) return;
           text2.current.textContent = subtitle.slice(0, i);
         }, 100 * (i + title.length + 5));
       }

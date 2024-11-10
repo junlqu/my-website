@@ -34,8 +34,21 @@ h2 {
     }
 }
 
+p {
+    margin: 0;
+    transition: all 1.1s ease-in-out;
+
+    @include themed() {
+        color: c(n5);
+    }
+}
+
 .wrapper {
     width: 100%;
     height: 100%;
     transition: all 1.1s ease-in-out;
+}
+
+.noshow {
+    opacity: 0;
 }
