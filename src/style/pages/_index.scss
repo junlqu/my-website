@@ -1,4 +1,11 @@
-@use "csslib/themes" as *;
+//  //  //  //  //  //  //  //  //
+// Imports
+//  //  //  //  //  //  //  //  //
+
+@use "sass:map";
+@use "../lib/func" as *;
+@use "../lib/vars" as *;
+@use "../lib/themes" as *;
 
 #main {
     @include themed() {
@@ -59,6 +66,7 @@
 }
 
 #toggle-mouse-trail {
+    display: none;
     position: absolute;
     top: 0;
     left: 0;
@@ -79,5 +87,9 @@
             color: c(s3);
             cursor: pointer;
         }
+    }
+
+    @include bp(map.get($bp, sm)) {
+        display: block;
     }
 }
