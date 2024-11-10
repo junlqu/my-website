@@ -10,12 +10,12 @@ export default function ThemeChangeButton(props) {
   const id2 = "theme-toggle-button-" + props.idx;
     
   useEffect(() => {
-    if (localStorage.getItem("theme") === null) {
+    if (!localStorage.getItem("theme")) {
       localStorage.setItem("theme", "light");
     }
 
-    if (localStorage.getItem("theme") === "dark") {
-      
+    if (localStorage.getItem("theme") != "light" && localStorage.getItem("theme") != "dark") {
+      localStorage.setItem("theme", "light");
     }
   });
 

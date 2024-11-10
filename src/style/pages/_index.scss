@@ -57,3 +57,27 @@
         opacity: 1;
     }
 }
+
+#toggle-mouse-trail {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 72px;
+    height: 12px;
+    padding: 4px 2px;
+    line-height: 12px;
+    font-size: 12px;
+    font-weight: 700;
+    z-index: 1;
+    pointer-events: auto;
+    transition: color 0.5s ease-in-out;
+
+    @include themed() {
+        color: c(n3);
+
+        &:hover {
+            color: c(s3);
+            cursor: pointer;
+        }
+    }
+}

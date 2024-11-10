@@ -1,14 +1,28 @@
 "use client";
 
-import { useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
 import TypeOut from "./TypeOut";
 
 export default function LandingIntro() {
+  const [op, setOp] = useState(true);
+
+  useEffect(() => {
+    if (!localStorage.getItem("mouseTrail")) {
+      localStorage.setItem("mouseTrail", true);
+    }
+    setOp(localStorage.getItem("mouseTrail") === "true");
+  }, []);
+
+  function opToggle() {
+    localStorage.setItem("mouseTrail", !op);
+    setOp(op => !op);
+  }
+
   const back = useRef();
   const fore = useRef();
 
-  const moveCursor = (e) => {
+  function moveCursor(e) {
     // Get the x and y coordinates of the mouse
     const { clientX, clientY } = e;
     const pos = back.current.getBoundingClientRect();
@@ -34,8 +48,9 @@ export default function LandingIntro() {
     <>
       <div className="intro-header">
         <TypeOut />
-        <div ref={back} className="cursor-background-wrapper" onMouseMove={(e) => {moveCursor(e)}}>
-          <div ref={fore} className="cursor-background noshow" />
+        <p id="toggle-mouse-trail" onClick={opToggle}>{op ? "TRAIL ON" : "TRAIL OFF"}</p>
+        <div ref={back} className="cursor-background-wrapper" onMouseMove={op ? (e) => moveCursor(e) : null}>
+          <div ref={fore} className="noshow" />
         </div>
       </div>
     </>
