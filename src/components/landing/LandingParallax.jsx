@@ -19,8 +19,25 @@ export default function LandingParallax() {
   const y7 = useTransform(scrollYProgress, [0, 0.95], [2400, 1200]);
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    if (latest >= 0.95) document.querySelector("#welcome-message-last").classList.remove("noshow");
-    else document.querySelector("#welcome-message-last").classList.add("noshow");
+    // For refreshing the page
+    if (latest == 0) {
+      document.querySelectorAll(".welcome-message-characters").forEach((el) => {
+        el.classList.add("noshow");
+      });
+    }
+    else {
+      document.querySelectorAll(".welcome-message-characters").forEach((el) => {
+        el.classList.remove("noshow");
+      });
+    }
+
+    // For showing the last message
+    if (latest >= 0.95) {
+      document.querySelector("#welcome-message-last").classList.remove("noshow");
+    }
+    else {
+      document.querySelector("#welcome-message-last").classList.add("noshow");
+    }
   });
 
   return (
@@ -43,7 +60,7 @@ export default function LandingParallax() {
 
 function MotionChar({char, y=0}) {
   return (
-    <motion.div className="welcome-message-characters" style={{y}}>
+    <motion.div className="welcome-message-characters noshow" style={{y}}>
       <h1>{char}</h1>
     </motion.div>
   )
