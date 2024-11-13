@@ -34,7 +34,7 @@ export default function LandingParallax() {
         <MotionChar char="O" y={y5}/>
         <MotionChar char="M" y={y6}/>
         <MotionChar char="E" y={y7}/>
-        <h2 id="welcome-message-last" class="noshow">to my website</h2>
+        <h2 id="welcome-message-last" className="noshow">to my website</h2>
       </div>
       <div className="welcome-message-spacer" />
     </div>
