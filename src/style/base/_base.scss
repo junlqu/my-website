@@ -1,4 +1,5 @@
-@use "csslib/themes" as *;
+@use "sass:map";
+@use "csslib/imports" as *;
 
 html {
     scroll-behavior: smooth;
@@ -20,17 +21,29 @@ header {
 
 h1 {
     transition: all 1.1s ease-in-out;
+    font-size: 72px;
+    margin: 0;
 
     @include themed() {
         color: c(n5);
+    }
+
+    @include bp(map.get($bp, sm)) {
+        font-size: 108px;
     }
 }
 
 h2 {
     transition: all 1.1s ease-in-out;
+    font-size: 56px;
+    margin: 0;
 
     @include themed() {
         color: c(n4);
+    }
+
+    @include bp(map.get($bp, sm)) {
+        font-size: 72px;
     }
 }
 
@@ -40,6 +53,22 @@ p {
 
     @include themed() {
         color: c(n5);
+    }
+}
+
+a {
+    text-decoration: none;
+    margin: 0;
+    transition: all 1.1s ease-in-out;
+    cursor: pointer;
+    pointer-events: auto;
+
+    @include themed() {
+        color: c(n5);
+
+        &:hover {
+            color: c(s5);
+        }
     }
 }
 
