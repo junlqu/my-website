@@ -22,6 +22,7 @@ header {
 h1 {
     transition: all 1.1s ease-in-out;
     font-size: 72px;
+    margin: 0;
 
     @include themed() {
         color: c(n5);
@@ -35,6 +36,7 @@ h1 {
 h2 {
     transition: all 1.1s ease-in-out;
     font-size: 56px;
+    margin: 0;
 
     @include themed() {
         color: c(n4);
@@ -51,6 +53,22 @@ p {
 
     @include themed() {
         color: c(n5);
+    }
+}
+
+a {
+    text-decoration: none;
+    margin: 0;
+    transition: all 1.1s ease-in-out;
+    cursor: pointer;
+    pointer-events: auto;
+
+    @include themed() {
+        color: c(n5);
+
+        &:hover {
+            color: c(s5);
+        }
     }
 }
 

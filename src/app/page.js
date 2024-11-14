@@ -20,6 +20,9 @@ export default function Main() {
       <LandingIntro />
       <LandingParallax />
       <AboutMe />
+      <div className="welcome-message-spacer" />
+      <div className="welcome-message-spacer" />
+      <div className="welcome-message-spacer" />
     </div>
   );
 }

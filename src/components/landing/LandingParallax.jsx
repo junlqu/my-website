@@ -10,17 +10,17 @@ export default function LandingParallax() {
     offset:["start end", "end start"]
   });
   const y = useTransform(scrollYProgress, [0, .95], [0, 500]);
-  const y1 = useTransform(scrollYProgress, [0, 0.95], [0, 1200]);
-  const y2 = useTransform(scrollYProgress, [0, 0.95], [400, 1200]);
-  const y3 = useTransform(scrollYProgress, [0, 0.95], [800, 1200]);
-  const y4 = useTransform(scrollYProgress, [0, 0.95], [1200, 1200]);
-  const y5 = useTransform(scrollYProgress, [0, 0.95], [1600, 1200]);
-  const y6 = useTransform(scrollYProgress, [0, 0.95], [2000, 1200]);
-  const y7 = useTransform(scrollYProgress, [0, 0.95], [2400, 1200]);
+  const y1 = useTransform(scrollYProgress, [0, 0.95], [200, 1200]);
+  const y2 = useTransform(scrollYProgress, [0, 0.95], [600, 1200]);
+  const y3 = useTransform(scrollYProgress, [0, 0.95], [1000, 1200]);
+  const y4 = useTransform(scrollYProgress, [0, 0.95], [1400, 1200]);
+  const y5 = useTransform(scrollYProgress, [0, 0.95], [1800, 1200]);
+  const y6 = useTransform(scrollYProgress, [0, 0.95], [2200, 1200]);
+  const y7 = useTransform(scrollYProgress, [0, 0.95], [2600, 1200]);
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
     // For refreshing the page
-    if (latest == 0) {
+    if (latest <= 0.1) {
       document.querySelectorAll(".welcome-message-characters").forEach((el) => {
         el.classList.add("noshow");
       });
