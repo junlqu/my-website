@@ -17,6 +17,8 @@ export default function LandingParallax() {
   const y5 = useTransform(scrollYProgress, [0, 0.95], [1800, 1200]);
   const y6 = useTransform(scrollYProgress, [0, 0.95], [2200, 1200]);
   const y7 = useTransform(scrollYProgress, [0, 0.95], [2600, 1200]);
+  const yd = useTransform(scrollYProgress, [0, 0.95], [550, 1150]);
+  const xd = useTransform(scrollYProgress, [0, 0.95], [-600, 0]);
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
     // For refreshing the page
@@ -44,6 +46,7 @@ export default function LandingParallax() {
     <div id="welcome-message">
       <div ref={back} id="welcome-message-wrapper">
         <motion.div id="welcome-message-background" style={{y}}/>
+        <MotionDecal y={yd} x={xd}/>
         <MotionChar char="W" y={y1}/>
         <MotionChar char="E" y={y2}/>
         <MotionChar char="L" y={y3}/>
@@ -64,4 +67,10 @@ function MotionChar({char, y=0}) {
       <h1>{char}</h1>
     </motion.div>
   )
-} 
+}
+
+function MotionDecal({y=0, x=0}) {
+  return (
+    <motion.div className="welcome-message-decal" style={{y, x}}/>
+  )
+}
