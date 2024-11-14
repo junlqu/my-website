@@ -6,7 +6,7 @@ import { useScroll, useMotionValueEvent } from "framer-motion";
 
 import aboutMe from "json/AboutMe.json";
 
-export default function AboutMe() {
+export default function LandingAboutMe() {
   const outline = aboutMe.Outline;
   const details = aboutMe.Details.Short;
 

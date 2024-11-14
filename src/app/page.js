@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 
-import AboutMe from "cmp/landing/AboutMe";
+import LandingAboutMe from "cmp/landing/LandingAboutMe";
 import LandingIntro from "cmp/landing/LandingIntro";
 import LandingParallax from "cmp/landing/LandingParallax";
 
@@ -19,7 +19,7 @@ export default function Main() {
     <div id="main" className="wrapper">
       <LandingIntro />
       <LandingParallax />
-      <AboutMe />
+      <LandingAboutMe />
       <div className="welcome-message-spacer" />
       <div className="welcome-message-spacer" />
       <div className="welcome-message-spacer" />
