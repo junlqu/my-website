@@ -81,3 +81,17 @@ a {
 .noshow {
     opacity: 0;
 }
+
+::-moz-selection {
+    @include themed() {
+        background: c(s3);
+        color: c(n3);
+    }
+}
+
+::selection {
+    @include themed() {
+        background: c(s3);
+        color: c(n3);
+    }
+}
