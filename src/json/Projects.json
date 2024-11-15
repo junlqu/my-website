@@ -1,0 +1,32 @@
+{
+  "1": {
+    "Title": "Pixel Horror",
+    "Description": "A pixel horror game that I developed for my hardware course. This game was completed fully in MIPS assembly language, with over 64 thousand lines.",
+    "Image": "projects/pixel-horror.png",
+    "Link": "https://github.com/junlqu/Pixel-Horror"
+  },
+  "2": {
+    "Title": "Yourscope Education Planner",
+    "Description": "A full stack web application that I developed for my software engineering course. This application students, teachers and employers to connect, schedule and meet each other. This was an all inclusive application that can be used throughout highschool to post graduation.",
+    "Image": "projects/yourscope.png",
+    "Link": "https://github.com/CSCC012023/final-project-s23-wenduo-sky"
+  },
+  "3": {
+    "Title": "Denzicle NFT",
+    "Description": "A smart contract deployed on the Ethereum blockchain that I developed for fun. I was very into crytocurrency around 2021, and wanted to learn more on how the environment worked. This was a mini project to test my learning.",
+    "Image": "projects/denzicle.png",
+    "Link": "https://github.com/junlqu/Denzicles-NFT"
+  },
+  "4": {
+    "Title": "NNN Discord Bot",
+    "Description": "A discord bot that I developed to account for daily checkins for the NNN (No Nut November) challenge. The bot ran on firebase, storing in an NoSQL database, taking account into all server users.",
+    "Image": "projects/nnn-bot.png",
+    "Link": "https://github.com/junlqu/NNN-Checkin"
+  },
+  "5": {
+    "Title": "Sudoku Simulator",
+    "Description": "I am a huge fan of the game Sudoku, and wanted to create a simulator that I can practice certain moves on. So I developed an engine that is trained to generate games for practive.",
+    "Image": "projects/sudoku.png",
+    "Link": "https://github.com/junlqu/Sudoku-Simulator"
+  }
+}
