@@ -322,17 +322,32 @@
     height: 2400px;
 }
 
-#landing-projects-background {
+#landing-projects-backdrop {
+    position: absolute;
+    top: 600px;
     width: 100%;
-    height: 1600px;
+    height: 2200px;
+    z-index: 1;
+
     @include themed() {
         background: c(p2);
     }
 }
 
+#landing-projects-background {
+    width: 100%;
+    height: 1600px;
+
+    @include themed() {
+        background: c(p);
+    }
+}
+
 #landing-projects-title {
+    position: relative;
     text-align: center;
     transition: none;
+    z-index: 2;
 
     @include themed() {
         :hover {
@@ -343,7 +358,7 @@
 
 #landing-projects-carousel {
     position: absolute;
-    top: 750px;
+    top: 950px;
     left: 10%;
     width: 80%;
     height: 80vh;

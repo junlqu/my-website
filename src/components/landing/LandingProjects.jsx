@@ -16,11 +16,13 @@ export default function LandingProjects() {
     offset:["start end", "end start"]
   });
 
-  const y = useTransform(scrollYProgress, [0, .5], [100, 500]);
-  const yt = useTransform(scrollYProgress, [0, .3], [-700, -1000]);
+  const x = useTransform(scrollYProgress, [0, .3], [-300, 0]);
+  const y = useTransform(scrollYProgress, [0, .4], [100, 600]);
+  const yt = useTransform(scrollYProgress, [0, .3], [-500, -800]);
 
   return (
     <div ref={back} id="landing-projects-wrapper" className="wrapper">
+      <motion.div id="landing-projects-backdrop" style={{x}}/>
       <motion.div id="landing-projects-background" style={{y}}/>
       <Title y={yt} />
       <Carousel />
