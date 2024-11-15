@@ -19,7 +19,7 @@ export default function MainHeader() {
     else if (scrollY > scrollState) {
       document.querySelector("#main-header").style = "top: -80px;";
     }
-  }, []);
+  });
 
   useEffect(() => {
     setScrollState(window.scrollY || window.pageYOffset);
