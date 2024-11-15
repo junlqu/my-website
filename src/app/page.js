@@ -6,6 +6,7 @@ import LandingAboutMe from "cmp/landing/LandingAboutMe";
 import LandingIntro from "cmp/landing/LandingIntro";
 import LandingParallax from "cmp/landing/LandingParallax";
 import LandingProjects from "cmp/landing/LandingProjects";
+import LandingContact from "@/components/landing/LandingContact";
 
 export default function Main() {
   useEffect(() => {
@@ -22,9 +23,7 @@ export default function Main() {
       <LandingParallax />
       <LandingAboutMe />
       <LandingProjects />
-      <div className="welcome-message-spacer" />
-      <div className="welcome-message-spacer" />
-      <div className="welcome-message-spacer" />
+      <LandingContact />
     </div>
   );
 }
