@@ -47,6 +47,20 @@ h2 {
     }
 }
 
+h3 {
+    transition: all 1.1s ease-in-out;
+    font-size: 32px;
+    margin: 0;
+
+    @include themed() {
+        color: c(n5);
+    }
+
+    @include bp(map.get($bp, sm)) {
+        font-size: 48px;
+    }
+}
+
 p {
     margin: 0;
     transition: all 1.1s ease-in-out;
@@ -67,7 +81,7 @@ a {
         color: c(n5);
 
         &:hover {
-            color: c(s5);
+            color: c(s);
         }
     }
 }
@@ -80,6 +94,7 @@ a {
 
 .noshow {
     opacity: 0;
+    z-index: -1 !important;
 }
 
 ::-moz-selection {
