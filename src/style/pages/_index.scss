@@ -326,7 +326,7 @@
     position: absolute;
     top: 600px;
     width: 100%;
-    height: 2200px;
+    height: 1800px;
     z-index: 1;
 
     @include themed() {
@@ -456,5 +456,165 @@
 
     #landing-projects-right {
         right: 20px;
+    }
+}
+
+//  //  //  //  //  //  //  //  //
+// Contact
+//  //  //  //  //  //  //  //  //
+
+#landing-contact {
+    width: 100%;
+}
+
+#landing-contact-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    min-height: 300px;
+    max-height: 700px;
+    margin: auto;
+    z-index: 2;
+    pointer-events: none;
+}
+
+#landing-contact-title {
+    display: block;
+    top: 30px;
+    position: relative;
+    max-width: 550px;
+    height: 150px;
+    margin: auto;
+    text-align: center;
+
+    @include themed() {
+        h1:hover {
+            color: c(s3);
+        }
+    }
+
+    @include bp(map.get($bp, sm)) {
+        height: 180px;
+    }
+}
+
+.landing-contact {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    border-radius: 24px 16px 24px 16px;
+}
+
+#landing-contact-background {
+    width: 100%;
+    height: 260px;
+    border-radius: 16px 16px 0 0;
+
+    @include themed() {
+        background: c(p2);
+    }
+
+    @include bp(map.get($bp, sm)) {
+        height: 320px;
+    }
+}
+
+#landing-contact-backdrop {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 20px;
+    box-sizing: border-box;
+    max-width: 380px;
+    height: 220px;
+    font-size: 24px;
+    line-height: 36px;
+    margin: auto;
+    padding: 20px;
+    z-index: 2;
+    border-radius: 16px;
+
+    @include bp(map.get($bp, sm)) {
+        max-width: 520px;
+        height: 280px;
+        font-size: 32px;
+        line-height: 40px;
+        padding: 40px;
+    }
+
+    @include themed() {
+        background: c(p);
+    }
+}
+
+#landing-contact-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#landing-contact-left {
+    width: 100px;
+    text-align: right;
+    margin-right: 10px;
+
+    p {
+        @include themed() {
+            color: c(s);
+        }
+    }
+
+    @include bp(map.get($bp, sm)) {
+        width: 120px;
+        margin-right: 20px;
+    }
+}
+
+#landing-contact-right {
+    width: 230px;
+
+    @include bp(map.get($bp, sm)) {
+        width: 300px;
+    }
+}
+
+#landing-contact-resume {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 36px;
+
+    @include bp(map.get($bp, sm)) {
+        height: 40px;
+    }
+
+    a {
+        margin-top: 4px;
+    }
+
+    button {
+        width: 120px;
+        height: 32px;
+        border: 0;
+        border-radius: 20px;
+        font-size: 16px;
+        transition: all 1.1s ease-in-out;
+        cursor: pointer;
+        
+        @include themed() {
+            background: c(p2);
+            color: c(s);
+
+            &:hover {
+                background: c(p3);
+                color: c(s2);
+            }
+        }
+
+        @include bp(map.get($bp, sm)) {
+            height: 36px;
+            font-size: 18px;
+        }
     }
 }
