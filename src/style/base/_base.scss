@@ -2,12 +2,12 @@
 @use "csslib/imports" as *;
 
 html {
-    overflow-x:hidden;
+    overflow-x: clip;
     scroll-behavior: smooth;
 }
 
 body {
-    overflow-x:hidden;
+    overflow-x: clip;
     margin: 0;
 }
 
