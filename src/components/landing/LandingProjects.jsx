@@ -16,9 +16,9 @@ export default function LandingProjects() {
     offset:["start end", "end start"]
   });
 
-  const x = useTransform(scrollYProgress, [0, .3], [-300, 0]);
+  const x = useTransform(scrollYProgress, [0, .4], [-300, 0]);
   const y = useTransform(scrollYProgress, [0, .4], [100, 600]);
-  const yt = useTransform(scrollYProgress, [0, .3], [-500, -800]);
+  const yt = useTransform(scrollYProgress, [0, .4], [-500, -800]);
 
   return (
     <div ref={back} id="landing-projects-wrapper" className="wrapper">
