@@ -1,4 +1,4 @@
-export default function AboutMe() {
+export default function Contact() {
   return (
     <div id="main" className="wrapper">
       
